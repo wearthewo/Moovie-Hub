@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script>
+      // Redirect if user is already logged in
+      if (localStorage.getItem("session_id")) {
+        window.location.href = "movies.html";
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="flex items-center justify-center h-screen bg-black text-white">
+    <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-bold mb-4">Welcome to Movie App</h1>
+      <button
+        id="login-btn"
+        class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-bold rounded"
+      >
+        Login
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
